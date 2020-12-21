@@ -1,0 +1,45 @@
+.FavoriteMovies {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.Table {
+    border-spacing: 0;
+    font-family: Arial;
+    text-align: center;
+}
+
+.TableHead {
+    th {
+        background-color: #ccc;
+        padding: 8px 20px;
+        font-size: .9rem;
+        font-weight: normal;
+
+        &:first-child {
+            border-radius: 5px 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 5px 0 0;
+        }
+    }
+}
+
+.TableBody {
+    td {
+        padding: 8px 20px;
+        font-size: .9rem;
+        font-weight: normal;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.Image {
+    width: 120px;
+}
+
+.Overview {
+    vertical-align: top;
+    text-align: left;
+}

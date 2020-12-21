@@ -1,0 +1,15 @@
+.ErrorMessages {
+    padding-left: 2px;
+    margin-top: 3px;
+
+    p {
+        color: #db1616;
+        font-size: .9rem;
+        font-family: Arial;
+        margin-bottom: 3px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

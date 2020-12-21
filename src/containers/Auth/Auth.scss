@@ -1,0 +1,72 @@
+.Auth {
+    .Tabs {
+        display: flex;
+        margin: 0 -20px 20px;
+        font-family: Arial;
+
+        .Tab {
+            flex-basis: 50%;
+            text-align: center;
+            padding: 15px 0;
+            border-radius: 3px 3px 0 0;
+            cursor: pointer;
+            transition: color 200ms ease;
+
+            &:hover {
+                color: #9e049e;
+            }
+
+            &.Active {
+                background-color: #9e049e;
+                color: #eee;
+                cursor: default;
+            }
+        }
+    }
+
+    form {
+        padding: 20px;
+        padding-top: 0;
+        max-width: 400px;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #eee;
+        border-radius: 3px;
+    }
+
+    .Input {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .InputWrapper {
+        position: relative;
+        margin-bottom: 30px;
+
+        .Input {
+            margin-bottom: 0;
+            padding-right: 40px;
+        }
+
+        .far {
+            position: absolute;
+            top: 12px;
+            right: 8px;
+            color: #9e049e;
+            display: flex;
+            justify-content: center;
+            width: 20px;
+            cursor: pointer;
+            transition: color 200ms ease;
+
+            &:hover {
+                color: darken(#9e049e, 15%);
+            }
+        }
+
+        + .ErrorMessages {
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.Movie {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    h1 {
+        font-size: 1.2rem;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .ImageWrapper {
+        min-height: 420px;
+        img {
+            width: 100%;
+        }
+    }
+
+    a {
+        border: 2px solid #6c036c;
+        padding: 8px;
+        text-decoration: none;
+        font-family: sans-serif;
+        display: block;
+        text-align: center;
+        color: #6c036c;
+        font-weight: 600;
+    }
+}
