@@ -16,7 +16,9 @@ import './App.scss';
 
 class App extends Component {
     state = {
-      search: ''
+      search: '',
+      showModal: false,
+      movieId: null
     }
 
   componentDidMount() {
@@ -65,8 +67,27 @@ class App extends Component {
     history.push('/auth');
   }
 
+  toggleModalHandler = status => {
+    if (status) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    this.setState({ showModal: status });
+  }
+
+  setMovieId = id => {
+    if (!id) {
+      this.setState({ movieId: null });
+    } else {
+      this.setState({ movieId: id });
+    }
+  }
+
   render() {
-    const { search } = this.state;
+    const { search, showModal, movieId } = this.state;
+
     const { 
       moviesList, 
       favoriteMovies,
@@ -115,6 +136,11 @@ class App extends Component {
                     <FavoriteMovies
                       {...props}
                       movies={favoriteMovies}
+                      showModal={showModal}
+                      movieId={movieId}
+                      toggleModal={this.toggleModalHandler}
+                      removeFavoriteMovie={toggleFavoriteMovie}
+                      setMovieId={this.setMovieId}
                     />
                   )}
               />

@@ -33,4 +33,12 @@
             transform: none;
         }
     }
+
+    &.Danger {
+        background-color: #e60000;
+
+        &:hover {
+            background-color: darken(#e60000, 10%);
+        }
+    }
 }

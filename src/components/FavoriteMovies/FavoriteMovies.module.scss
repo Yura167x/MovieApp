@@ -32,6 +32,23 @@
         font-size: .9rem;
         font-weight: normal;
         border-bottom: 1px solid #ccc;
+        transition: background-color 200ms ease;
+    }
+}
+
+.TableRow {
+    cursor: pointer;;
+
+    &:hover {
+        td {
+            background-color: #eee;
+        }
+    }
+
+    &:last-child {
+        td {
+            border-bottom: none;
+        }
     }
 }
 
@@ -42,4 +59,27 @@
 .Overview {
     vertical-align: top;
     text-align: left;
+}
+
+.Icon {
+    [data-adult=true] {
+        color: lime;
+    }
+
+    [data-adult=false] {
+        color: #c50303;
+    }
+}
+
+.Conversation {
+    margin-bottom: 20px;
+}
+
+.BtnsWrapper {
+    display: flex;
+    justify-content: center;
+
+    button:first-child {
+        margin-right: 20px;
+    }
 }
